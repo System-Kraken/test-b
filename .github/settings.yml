@@ -49,3 +49,6 @@ labels:
   - name: test-b-label
     description: sample repo level label
     color: bfd4f2
+   
+  - name: label-b
+    oldname: label-b
