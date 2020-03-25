@@ -1,0 +1,51 @@
+repository:
+  # See https://github.com/apps/settings for all available settings.
+
+  # Either `true` to make the repository private, or `false` to make it public.
+  private: False
+
+  # Updates the default branch for this repository.
+  default_branch: master
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: True
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: True
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: True
+
+  # If 'True' issues can be opened, if 'False' disable issues for repo
+  has_issues: False
+
+  # If 'True' repo can have a wiki, if 'False' disable wiki functionality
+  has_wiki: False
+  
+  # Labels: define labels for Issues and Pull Requests
+labels:
+
+  - name: feature
+    # If including a `#`, make sure to wrap it with quotes!
+    color: '#336699'
+    description: New functionality.
+
+  - name: first-timers-only
+    # include the old name to rename an existing label
+    oldname: Help Wanted
+  
+  - name: org-level-label
+    color: 123456
+    description: Keeping the old org-level-label
+  
+  - name: test-b-label2-rename
+    oldname: test-b-label2
+    color: 0E4BEF
+    description: rename of test-b-label2
+  
+  - name: test-b-label
+    description: sample repo level label
+    color: bfd4f2
