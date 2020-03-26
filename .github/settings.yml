@@ -27,23 +27,16 @@ repository:
   
   # Labels: define labels for Issues and Pull Requests
 labels:
-
   - name: first-timers-only
     # include the old name to rename an existing label
     oldname: Help Wanted
-  
-  - name: org-level-label
-    color: 123456
-    description: Keeping the old org-level-label
-  
+    description: Keeping the old org-level-label 
   - name: test-b-label2-rename
     oldname: test-b-label2
     color: 0E4BEF
     description: rename of test-b-label2
-  
   - name: test-b-label
     description: sample repo level label
     color: bfd4f2
-   
   - name: label-b
     oldname: label-b
