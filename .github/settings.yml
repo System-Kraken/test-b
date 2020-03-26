@@ -25,18 +25,14 @@ repository:
   # If 'True' repo can have a wiki, if 'False' disable wiki functionality
   has_wiki: False
   
-  # Labels: define labels for Issues and Pull Requests
+# Labels: define labels for Issues and Pull Requests
 labels:
-  - name: first-timers-only
-    # include the old name to rename an existing label
-    oldname: Help Wanted
-    description: Keeping the old org-level-label 
-  - name: test-b-label2-rename
-    oldname: test-b-label2
-    color: 0E4BEF
-    description: rename of test-b-label2
-  - name: test-b-label
-    description: sample repo level label
-    color: bfd4f2
-  - name: label-b
-    oldname: label-b
+  - name: in progress
+    color: '#4877f4'
+    description: Keeping the old org-level-label
+  - name: long running
+    color: '#6C3B9E'
+    description: Keeping the old org-level-label
+  - name: do not merge
+    color: '#ED5269'
+    description: Keeping the old org-level-label
