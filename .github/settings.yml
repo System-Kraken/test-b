@@ -37,7 +37,10 @@ labels:
     color: '#ED5269'
     description: Keeping the old org-level-label
     
- branches:
+ 
+ 
+ 
+branches:
   - name: spider
     # https://developer.github.com/v3/repos/branches/#update-branch-protection
     # Branch Protection settings. Set to null to disable
@@ -45,7 +48,7 @@ labels:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 5
+        required_approving_review_count: 2
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
@@ -63,4 +66,4 @@ labels:
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
       restrictions:
         users: []
-        teams: []   
+        teams: []
