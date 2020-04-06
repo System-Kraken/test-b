@@ -20,7 +20,7 @@ repository:
   allow_rebase_merge: True
 
   # If 'True' issues can be opened, if 'False' disable issues for repo
-  has_issues: True
+  has_issues: False
 
   # If 'True' repo can have a wiki, if 'False' disable wiki functionality
   has_wiki: False
