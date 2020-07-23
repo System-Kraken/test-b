@@ -1,0 +1,41 @@
+name: Pull Request CI
+env:
+  REPO_NAME: ${{ github.event.pull_request.base.repo.name }}
+  ENV_URL: https://v${{ github.event.pull_request.number }}.pr-${{ github.event.pull_request.base.repo.name }}.com
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v2
+        with:
+          script: |
+            body = `PR deploy pushed, it will soon be reachable at\
+             ${process.env.ENV_URL}`
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            })
+
+  failure-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v2
+        with:
+          script: |
+            body = `There was an **error** with you PR deploy. Logs can be found in\
+             https://github.com/SystemKraken/${context.repo.repo}/pull/${context.issue.number}/checks.
+            Your instance would have been reachable at\
+             ${process.env.ENV_URL}`
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            })
