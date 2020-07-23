@@ -1,7 +1,7 @@
 name: Pull Request CI
 env:
   REPO_NAME: ${{ github.event.pull_request.base.repo.name }}
-  ENV_URL: https://cookinglight.com
+  ENV_URL: https://${{ secrets.DOMAIN }}
 
 on:
   pull_request:
